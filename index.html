@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YoloStacks — Serious Engineering. Questionable Decisions.</title>
+  <meta name="description" content="YoloStacks is a quiet corner of the internet for developers who write code, break things, and occasionally remember to read the diff. Home of Anger-Driven Development (AAD).">
+  <meta name="theme-color" content="#090d12">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20width=%2232%22%20height=%2232%22><text y=%2224%22 font-size=%2222%22>⚡</text></svg>">
+  <link rel="canonical" href="https://yolostacks.github.io/">
+  <meta property="og:title" content="YoloStacks — Serious Engineering. Questionable Decisions.">
+  <meta property="og:description" content="A quiet corner of the internet for developers who write code, break things, and occasionally remember to read the diff.">
+  <meta property="og:url" content="https://yolostacks.github.io/">
+  <meta property="og:type" content="website">
+  <script>
+    (function () {
+      try {
+        var queryTheme = new URLSearchParams(window.location.search).get('theme');
+        if (queryTheme === 'light' || queryTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', queryTheme);
+        } else {
+          var savedTheme = localStorage.getItem('yolostacks-theme') || localStorage.getItem('aad-theme');
+          if (savedTheme === 'light' || savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
